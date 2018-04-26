@@ -1,4 +1,5 @@
 var quatro =  [
+
     {
         "filename": "BGT_desktop_00405.jpg",
         "frame": {"x":1,"y":1,"w":960,"h":540},
@@ -1623,17 +1624,13 @@ var quatro =  [
 
 var selectedHS = undefined;
 var imgList = [["./assets/images/setUno.jpg",frames],["./assets/images/dos.jpg",dos],["./assets/images/tres.jpg",tres],["./assets/images/quatro.jpg",quatro]];
-
 TweenLite.defaultEase = Linear.easeNone;
-
 var canvas = document.querySelector("#canvas");
 var context = canvas.getContext("2d");
 var resolution = window.devicePixelRatio || 1;
 var vw, vh, cx, cy;
-resize();
 
-   
-// window.addEventListener("resize", resize);
+
 
 function tweenThis (selectedItem,imgLoc,imgData,start,end, callBackFunc) {
 
@@ -1720,6 +1717,8 @@ function resize() {
 
 tweenThis (0,imgList[0][0],imgList[0][1],0,0,undefined);
 
+
+
 function closePanel (itemNumber) {
     showHideHS ("show");
     var currentCloseBtn = document.getElementById("closeBtn-" + itemNumber);
@@ -1777,40 +1776,50 @@ function showHideHS (whichOne) {
     }
 }  // end of ShowHideHS
 
-function doNothing () {}
+  
+
+function doNothing () {
+    //console.log("what the ...");
+}
 
 
-$( document ).ready(function() {
+function startDesktop () {
+    $( document ).ready(function() {
 
-    var promises = [];
-    var preload = ["./assets/images/setUno.jpg","./assets/images/dos.jpg","./assets/images/tres.jpg","./assets/images/quatro.jpg"];
-
-    for (var i = 0; i < preload.length; i++) {
-    (function(url, promise) {
-        var img = new Image();
-        img.onload = function() {promise.resolve();};
-        img.src = url;
-    })(preload[i], promises[i] = $.Deferred());
-    }
-    $.when.apply($, promises).done(function() {
-    letsGetStarted ();
-    });
-
-    function letsGetStarted () {
-        document.getElementById("interactive-container").style.display = "block";
-
-        $( "#hs-0" ).click(function() {openPanel(0);});
-        $( "#hs-1" ).click(function() {openPanel(1);});
-        $( "#hs-2" ).click(function() {openPanel(2);});
-        $( "#hs-3" ).click(function() {openPanel(3);});
+        var promises = [];
     
-        $( "#closeBtn-0" ).click(function() {closePanel (0);});
-        $( "#closeBtn-1" ).click(function() {closePanel (1);});
-        $( "#closeBtn-2" ).click(function() {closePanel (2);});
-        $( "#closeBtn-3" ).click(function() {closePanel (3);});
-    }
+        for (var i = 0; i < imgList.length; i++) {
+        (function(url, promise) {
+            var img = new Image();
+            img.onload = function() {promise.resolve();};
+            img.src = url;
+        })(imgList[i][0], promises[i] = $.Deferred());
+        }
+        $.when.apply($, promises).done(function() {
+        letsGetStarted ();
+        });
+    
+        function letsGetStarted () {
+            resize();
+            document.getElementById("d-interactive-container").style.display = "block";
+    
+            $( "#hs-0" ).click(function() {openPanel(0);});
+            $( "#hs-1" ).click(function() {openPanel(1);});
+            $( "#hs-2" ).click(function() {openPanel(2);});
+            $( "#hs-3" ).click(function() {openPanel(3);});
+        
+            $( "#closeBtn-0" ).click(function() {closePanel (0);});
+            $( "#closeBtn-1" ).click(function() {closePanel (1);});
+            $( "#closeBtn-2" ).click(function() {closePanel (2);});
+            $( "#closeBtn-3" ).click(function() {closePanel (3);});
+        }
+    
+    });
+        
+}
 
-});
+
+startDesktop ();
 
 
 

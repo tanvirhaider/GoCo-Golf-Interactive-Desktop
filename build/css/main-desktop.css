@@ -6,10 +6,11 @@
   font-style: normal; }
 
 body {
-  background: #b8b1b1; }
+  background: #b8b1b1;
+  margin: 0px; }
 
-#wrapper {
-  position: absolute;
+#wrapper-desktop {
+  position: relative;
   left: 0px;
   right: 0px;
   width: 100%;
@@ -17,7 +18,7 @@ body {
   top: 0px;
   background-color: black;
   overflow: hidden; }
-  #wrapper #interactive-container {
+  #wrapper-desktop #d-interactive-container {
     position: absolute;
     height: 540px;
     width: 960px;
@@ -29,7 +30,7 @@ body {
     background-color: black;
     overflow: hidden !important;
     display: none; }
-    #wrapper #interactive-container .description {
+    #wrapper-desktop #d-interactive-container .description {
       height: auto;
       position: absolute;
       color: white;
@@ -42,29 +43,29 @@ body {
       text-transform: uppercase;
       -webkit-font-smoothing: antialiased;
       visibility: hidden; }
-    #wrapper #interactive-container #d-0 {
+    #wrapper-desktop #d-interactive-container #d-0 {
       top: 100px;
       left: 460px;
       width: 380px;
       background: linear-gradient(to right, black 0%, #3d3d3d 100%); }
-    #wrapper #interactive-container #d-1 {
+    #wrapper-desktop #d-interactive-container #d-1 {
       top: 330px;
       left: 156px;
       width: 340px;
       text-align: right;
       background: linear-gradient(to left, black 0%, #3d3d3d 100%); }
-    #wrapper #interactive-container #d-2 {
+    #wrapper-desktop #d-interactive-container #d-2 {
       top: 100px;
       left: 440px;
       width: 400px;
       background: linear-gradient(to right, black 0%, #3d3d3d 100%); }
-    #wrapper #interactive-container #d-3 {
+    #wrapper-desktop #d-interactive-container #d-3 {
       top: 330px;
       left: 118px;
       text-align: right;
       width: 380px;
       background: linear-gradient(to left, black 0%, #3d3d3d 100%); }
-    #wrapper #interactive-container #canvas {
+    #wrapper-desktop #d-interactive-container #canvas {
       position: absolute;
       left: 0px;
       right: 0px;
@@ -72,7 +73,7 @@ body {
       margin-left: auto;
       margin-right: auto;
       overflow: hidden !important; }
-    #wrapper #interactive-container .btn-style {
+    #wrapper-desktop #d-interactive-container .btn-style {
       width: 40px;
       height: 40px;
       background-repeat: no-repeat;
@@ -84,7 +85,7 @@ body {
       user-select: none;
       cursor: pointer;
       position: absolute; }
-    #wrapper #interactive-container .close-btn-style {
+    #wrapper-desktop #d-interactive-container .close-btn-style {
       width: 40px;
       height: 40px;
       background-repeat: no-repeat;
@@ -98,27 +99,27 @@ body {
       position: absolute;
       z-index: 99999;
       visibility: hidden; }
-    #wrapper #interactive-container #hs-0 {
+    #wrapper-desktop #d-interactive-container #hs-0 {
       top: 275px;
       left: 590px; }
-    #wrapper #interactive-container #hs-1 {
+    #wrapper-desktop #d-interactive-container #hs-1 {
       top: 262px;
       left: 404px; }
-    #wrapper #interactive-container #hs-2 {
+    #wrapper-desktop #d-interactive-container #hs-2 {
       top: 120px;
       left: 385px; }
-    #wrapper #interactive-container #hs-3 {
+    #wrapper-desktop #d-interactive-container #hs-3 {
       top: 110px;
       left: 202px; }
-    #wrapper #interactive-container #closeBtn-0 {
+    #wrapper-desktop #d-interactive-container #closeBtn-0 {
       top: 80px;
       left: 800px; }
-    #wrapper #interactive-container #closeBtn-1 {
+    #wrapper-desktop #d-interactive-container #closeBtn-1 {
       top: 310px;
       left: 456px; }
-    #wrapper #interactive-container #closeBtn-2 {
+    #wrapper-desktop #d-interactive-container #closeBtn-2 {
       top: 80px;
       left: 800px; }
-    #wrapper #interactive-container #closeBtn-3 {
+    #wrapper-desktop #d-interactive-container #closeBtn-3 {
       top: 310px;
       left: 456px; }

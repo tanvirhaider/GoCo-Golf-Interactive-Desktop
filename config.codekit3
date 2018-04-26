@@ -150,7 +150,7 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"\/app\/scss\/main.scss": {
+	"\/app\/scss\/main-desktop.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -158,7 +158,7 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/build\/css\/main.css",
+		"oAP": "\/build\/css\/main-desktop.css",
 		"oF": 2,
 		"oS": 0,
 		"uL": 1

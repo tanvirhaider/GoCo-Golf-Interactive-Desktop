@@ -5,11 +5,12 @@
 
 body {
     background: rgb(184, 177, 177);
+    margin: 0px;
 }
 
 
-#wrapper {
-    position: absolute;
+#wrapper-desktop {
+    position: relative;
     left: 0px;
     right: 0px;
     width: 100%;
@@ -18,7 +19,7 @@ body {
     background-color: black;
     overflow: hidden;
 
-    #interactive-container {
+    #d-interactive-container {
         position: absolute;
         height: 540px;
         width: 960px;
