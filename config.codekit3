@@ -159,7 +159,7 @@
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/build\/js\/data.js",
 		"oF": 2,
 		"sC": 3,
